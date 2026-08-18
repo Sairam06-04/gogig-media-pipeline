@@ -96,10 +96,10 @@ Navigate to `http://127.0.0.1:8000/docs` in your browser to test the endpoints.
 Below are the successful pipeline executions for the three required sample images:
 
 ### Test Case 1: Image_1.jpg
-![Output for Image 1](assets/output_image_1.png)
+![Output for Image 1](assets/Image_Output_1.jpg)
 
 ### Test Case 2: Image_2.jpg
-![Output for Image 2](assets/output_image_2.png)
+![Output for Image 2](assets/Image_Output_2.jpg)
 
 ### Test Case 3: Image_3.jpg
-![Output for Image 3](assets/output_image_3.png)
+![Output for Image 3](assets/Image_Output_3.jpg)
