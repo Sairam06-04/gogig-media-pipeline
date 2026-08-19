@@ -1,12 +1,20 @@
+import os
+from dotenv import load_dotenv
 from celery import Celery
 from database import SessionLocal, ImageJob
 from services import analyze_image  # Importing our new analysis engine
 
-# Configure Celery to use the Redis container we started via Docker
+# Load environment variables
+load_dotenv()
+
+# Cloud-Ready: Uses Render's REDIS_URL if available, otherwise falls back to local Docker Redis
+REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
+
+# Configure Celery to use the Redis broker
 celery_app = Celery(
     "image_worker",
-    broker="redis://localhost:6379/0",
-    backend="redis://localhost:6379/0"
+    broker=REDIS_URL,
+    backend=REDIS_URL
 )
 
 @celery_app.task

@@ -1,8 +1,13 @@
+import os
+from dotenv import load_dotenv
 from sqlalchemy import create_engine, Column, String, JSON
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-# This URL matches the credentials we set in your docker-compose.yml file
-DATABASE_URL = "postgresql://myuser:mypassword@localhost:5432/gogig_db"
+# Load environment variables from .env file
+load_dotenv()
+
+# Cloud-Ready: Uses Render's DATABASE_URL if available, otherwise falls back to local Docker DB
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://myuser:mypassword@localhost:5432/gogig_db")
 
 # Set up the connection engine
 engine = create_engine(DATABASE_URL)
