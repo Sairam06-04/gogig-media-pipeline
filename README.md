@@ -6,7 +6,7 @@ A robust, asynchronous backend system designed to ingest, process, and analyze v
 **☁️ Deployment Note:**
 * **The Stack:** 4-tier architecture (FastAPI, Celery, PostgreSQL, Redis).
 * **The Constraint:** Cloud providers do not offer free tiers for 24/7 background workers.
-* **The Solution:** To avoid unnecessary costs for this assessment, the API is securely tunneled directly from my local environment.
+* **Cost** To avoid unnecessary costs ($7) for this assessment, I used my System a my Localhost Server and Executed my Assignment .
 
 ---
 
