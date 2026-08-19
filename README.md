@@ -3,10 +3,10 @@
 A robust, asynchronous backend system designed to ingest, process, and analyze vehicle images from the field. This pipeline utilizes a background worker architecture to perform automated quality control and metadata extraction without blocking the main application thread.
 
 ## 🚀 Live Deployment PART
-**Deployment Note regarding Cloud Infrastructure:**
-This application utilizes a robust 4-tier architecture (FastAPI Web Server, Celery Background Worker, PostgreSQL, and Redis).
-Because background workers must run 24/7 to continuously poll queues, modern cloud platforms (like Render, Heroku, or AWS) do not offer free tiers for this specific compute requirement.
-To avoid unnecessary infrastructure costs for a 48-hour assessment, this application is being hosted directly from my local environment via a secure `localhost.run` SSH tunnel.
+**☁️ Deployment Note:**
+* **The Stack:** 4-tier architecture (FastAPI, Celery, PostgreSQL, Redis).
+* **The Constraint:** Cloud providers do not offer free tiers for 24/7 background workers.
+* **The Solution:** To avoid unnecessary costs for this assessment, the API is securely tunneled directly from my local environment.
 
 ---
 
